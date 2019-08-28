@@ -198,6 +198,7 @@ public class Player : MonoBehaviour
           //without a numpad will be unable to drop bombs
             DropBomb();
         }
+       
     }
 
     /// <summary>
