@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public KeyCode dropBombKey;
     public KeyCode upKey, downKey, leftKey, rightKey;
 
-    public GlobalStateManager globalManager;
+    public GameManager gamemanager;
     //Player parameters
     [Range(1, 2)] //Enables a nifty slider in the editor
     public int playerNumber = 1;
@@ -159,7 +159,7 @@ public class Player : MonoBehaviour
         }
         Debug.Log("player " + playerNumber + " is dead");
         dead = true;
-        globalManager.PlayerDied(playerNumber);
+        gamemanager.PlayerDied(playerNumber);
         Destroy(gameObject);
     }
 }

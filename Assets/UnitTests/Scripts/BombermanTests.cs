@@ -49,7 +49,7 @@ public class BombermanTests
         player1.DropBomb();
 
         //wait for end of frame
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
 
         //check if bomb exists in game
         Bomb bomb = Object.FindObjectOfType<Bomb>();
@@ -70,7 +70,7 @@ public class BombermanTests
         player2.DropBomb();
 
         //wait for end of frame
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForFixedUpdate();
 
         //check if bomb exists in game
         Bomb bomb = Object.FindObjectOfType<Bomb>();
@@ -84,15 +84,19 @@ public class BombermanTests
     [UnityTest]
     public IEnumerator PlayerCanMove()
     {
-        yield return new WaitForEndOfFrame();
+
+        yield return new WaitForFixedUpdate();
     }
     [UnityTest]
     public IEnumerator PlayersDieInlineWithBomb()
     {
 
         Player player = GetPlayer(1);
+       
+     
 
-        yield return new WaitForEndOfFrame();
+
+        yield return new WaitForFixedUpdate();
 
 
     }
